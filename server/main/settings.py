@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'corsheaders', 
     'rest_framework',
     'api',
+    'login_api'
 
 
 ]
@@ -56,6 +57,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'main.urls'
+
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+
+}
 
 TEMPLATES = [
     {
